@@ -1,0 +1,25 @@
+notes.md
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Vite build output
+frontend/dist/
+
+# Environment variables (important - never push these)
+.env
+frontend/.env
+backend/.env
+
+# Vite cache
+frontend/node_modules/.vite/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+*.log
