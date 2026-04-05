@@ -10,7 +10,7 @@ frontend/dist/
 
 # Environment variables (important - never push these)
 .env
-frontend/.env
+frontend/.env.production
 backend/.env
 
 # Vite cache
