@@ -81,29 +81,6 @@ HTML5 Canvas                        In-memory Map
 
 ---
 
-## Project Structure
-
-\`\`\`
-skribbl-clone/
-├── frontend/
-│   └── src/
-│       ├── pages/
-│       │   ├── Home.jsx      # Create/join room + game mode selector
-│       │   ├── Lobby.jsx     # Waiting room with player list
-│       │   └── Game.jsx      # Main game screen
-│       └── components/
-│           ├── Canvas.jsx    # Drawing surface + tools
-│           ├── Timer.jsx     # Countdown with color feedback
-│           ├── PlayerList.jsx
-│           ├── GuessInput.jsx
-│           ├── WordSelection.jsx
-│           └── RoundEnd.jsx
-└── backend/
-    ├── index.js              # Express + Socket.IO + all game logic
-    └── words.js              # Word list + random picker
-\`\`\`
-
----
 
 ## Deployment
 
