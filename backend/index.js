@@ -14,7 +14,7 @@ const io = new Server(server, {
   cors: {
     origin: [
       'http://localhost:5173',
-      'https://skribbl-clone.vercel.app',  //  Vercel URL
+      'https://skribbl-io-clone.vercel.app/',  //  Vercel URL
       /\.vercel\.app$/                      // allows all vercel preview URLs
     ],
     methods: ['GET', 'POST']
