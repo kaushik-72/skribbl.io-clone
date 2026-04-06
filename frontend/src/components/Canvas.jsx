@@ -89,11 +89,16 @@ function Canvas({ roomId, isDrawer }) {
   function getPos(e) {
     const canvas = canvasRef.current;
     const rect = canvas.getBoundingClientRect();
+
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;
     const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+
     return {
-      x: (clientX - rect.left) / canvas.width,
-      y: (clientY - rect.top) / canvas.height,
+      x: ((clientX - rect.left) * scaleX) / canvas.width,
+      y: ((clientY - rect.top) * scaleY) / canvas.height,
     };
   }
 
@@ -194,6 +199,7 @@ function Canvas({ roomId, isDrawer }) {
           ref={canvasRef}
           width={800}
           height={500}
+          style={{ display: 'block' }}
           className={`bg-gray-700 rounded-xl w-full touch-none
             ${isDrawer ? "cursor-crosshair" : "cursor-not-allowed"}`}
           onMouseDown={startDrawing}
